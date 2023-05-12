@@ -69,36 +69,40 @@ body {
 .header .header__bg {
   opacity: 0;
   visibility: hidden;
+  transition: 0.5s;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .header .header__bg.active {
   opacity: 1;
   visibility: visible;
   backdrop-filter: blur(5px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
+
   z-index: 50;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 899px) {
   .header .header__globalNav {
     transform: translateX(120%);
     background-color: #dce2ec;
     position: absolute;
+    transition: 0.5s;
     top: 0;
     right: 0;
+    height: 100vh;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 899px) {
   .header .header__globalNav.active {
-    height: 100vh;
-    width: 80%;
     transition: 0.5s;
     transform: translateX(0%);
     z-index: 51;
   }
-  .header .header__globalNav.active .header__listItem {
+  .header .header__globalNav .header__listItem {
     color: #394563;
   }
 }
@@ -163,7 +167,7 @@ body {
   height: 2px;
   background-color: #ffffff;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 .header .header__hamburger-line:first-of-type {
   top: 8px;
@@ -564,4 +568,17 @@ body {
 }
 .frontContact .frontContact__table td {
   border: none;
+}
+
+/* js fadein animation */
+.js-fadein-ready {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s, visibility 1s, transform 1s;
+}
+.js-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
