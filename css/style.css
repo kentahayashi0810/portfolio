@@ -125,6 +125,9 @@ body {
   letter-spacing: 0.1em;
   line-height: 1.5;
 }
+.header .header__listItem:hover {
+  border-bottom: #ffffff solid 1px;
+}
 @media only screen and (max-width: 899px) {
   .header .header__listItem {
     font-size: 3rem;
@@ -257,6 +260,7 @@ body {
   color: #234d4f;
   margin: 12rem 0 6rem;
   display: block;
+  transition: 0.3s;
 }
 @media only screen and (max-width: 899px) {
   .frontGreeting .frontGreeting__button {
@@ -265,7 +269,8 @@ body {
   }
 }
 .frontGreeting .frontGreeting__button:hover {
-  background-color: #839db3;
+  background-color: #394563;
+
   color: #dce2ec;
   border: 2px solid #dce2ec;
 }
